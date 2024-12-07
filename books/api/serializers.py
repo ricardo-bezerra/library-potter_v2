@@ -9,25 +9,29 @@ class EmployeeSerializer(serializers.ModelSerializer):
             'email': {'write_only': True}
         }
         model = Employees
-        fields = (
-            'creat_at', 
-            'actualized_at', 
-            'active', 
-            'book', 
-            'name', 
-            'email', 
-            'business_unity',
-            'type_function'
-        )
+        fields = "__all__"
+        
+        # fields = (
+        #     'creat_at', 
+        #     'actualized_at', 
+        #     'active', 
+        #     'book', 
+        #     'name', 
+        #     'email', 
+        #     'business_unity',
+        #     'type_function'
+        # )
 
 class BookSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Books
-        fields = (
-            'creat_at', 
-            'actualized_at', 
-            'active', 
-            'title', 
-            'url'
-        )
+        fields = "__all__"
+        
+        # fields = (
+        #     'creat_at', 
+        #     'actualized_at', 
+        #     'active', 
+        #     'title', 
+        #     'url'
+        # )

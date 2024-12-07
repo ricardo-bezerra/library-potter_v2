@@ -10,7 +10,7 @@ class Base (models.Model):
 
 class Books(Base):
     title = models.CharField(max_length=55)
-    url = models.URLField(unique=True)
+    url = models.URLField(unique=True, max_length=550)
 
     class Meta:
         verbose_name = 'Book'
